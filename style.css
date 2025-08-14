@@ -1,57 +1,244 @@
-body{
-    
+:root {
+    --main-color: #d98190;
+    --secondary-color: #b96372;
+    --text-color: #170f3e;
+    --heading-font: "Playfair Display", serif;
+    --default-font: "Poppins", sans-serif;
+    ;
 }
-header .navbar-brand{
-    color: #d63384;
+
+body {
+    font-family: var(--default-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: black;
+    font-family: var(--heading-font-family);
     font-weight: bold;
-    font-size: 1.9rem;
 }
-.navbar-nav{
-    font-size: 1rem;
-    
+.navbar-brand {
+    font-size: 30px;
+    font-weight: 600;
+    color:#b12a5b
 }
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: 96px;
+
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-weight: normal;
+    font-size: 18px;
+    opacity: 0.9;
+
+}
+
+nav {
+    padding: 20px 0;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
 nav li {
     display: inline;
+    list-style: none;
     line-height: 42px;
     margin-left: 15px;
-    list-style: none;
+
+
 }
-.hero{
-    background-color:#ee8ebe;
-    background-size: cover;
-    background-position: center;
-    max-width: 100%;
-    height: 70vh;
-    margin-bottom: 30px;
-    padding: 80px;
-    align-items: center;
-    justify-content: center;
-}
-.hero h1{
-    font-size: 6rem;
-    font-weight: bold;
-    text-align: center;
-}
-.hero p{
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-}
-.hero a{
-    font-size: 1.5rem;
-    color: #fff;
-    background-color: #d63384;
-    padding: 15px 30px;
-    border-radius: 5px;
+
+.logo {
     text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
+    line-height: 42px;
+    color: #b12a5b;
+    font-size: 30px;
+    font-weight: 600;
+    max-height: 40px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #272142;
+    font-size: 16px;
+    transition: all 100m ease-in-out;
+}
+
+li.active a {
+    color: var(--secondary-color);
+}
+
+nav a:hover,
+nav li.active a {
+    color: var(--secondary-color)
+}
+
+.hero {
+    background: var(--secondary-color);
+    text-align: center;
+    padding: 160px 20px;
+}
+
+.hero p {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.hero h2 {
+    font-family: var(--heading-font-family);
+    font-weight: normal;
+    line-height: 1.5;
+    font-size: 24px;
+}
+
+.project-desciption {
+    padding: 50px 20px;
+    margin-bottom: 60px;
+}
+
+.content-container {
+    padding: 60px 10px;
+}
+
+.content h1 {
+    font-size: 64px;
+    line-height: 80px;
+}
+
+.content h2 {
+    font-size: 18px;
+    font-family: var(--default-font-family);
+}
+
+.content {
+    margin: 30px;
+    background: var(--main-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+.btn-branding{
+    border: 3px solid #b96372;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.btn-branding:hover {
+    background-color: var(--secondary-color);
+    color: fff;
+}
+.btn-branding-outline {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 15px 30px;
+}
+.btn-branding-outline:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.profile-img {
+    width: 400px;
+    border-radius: 50%;
+    padding: 10px 14px;
+    margin-top: 200px;
+
+
+}
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-branding-outline {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 15px 30px;
+}
+
+footer .email-link {
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+footer .email-link:hover {
+    color: var(--text-color);
+}
+
+footer .social-links a {
+    margin: 0 20px;
+    color: var(--text-color);
+    background: var(--main-color);
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 100ms ease-in-out;
+}
+
+footer .social-links a:hover {
+    color: white;
+    background: var(--text-color);
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 44px;
+        line-height: 56px;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .content {
+        text-align: center;
+        padding: 0;
+    }
+
+    .project-desciption {
+        padding: 0;
+        text-align: center;
+    }
+
 }
 footer{
     background-color: #d63384;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    
 }
